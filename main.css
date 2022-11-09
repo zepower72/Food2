@@ -665,7 +665,7 @@ p {
   width: 60px;
 }
 .menu-content:hover .menu-content__Elticon {
-  transition-property: all 1s;
+  transition-property: all;
   transform: rotate(360deg);
 }
 .menu-content__listElt {
