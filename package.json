@@ -1,0 +1,15 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "site de commande de repas en ligne",
+  "main": "index.html",
+  "scripts": {
+    "sass": "sass --watch sass/main.scss main.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.55.0"
+  }
+}

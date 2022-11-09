@@ -1,0 +1,218 @@
+// FORMULAIRE
+
+.place {
+    @include flex(row);
+
+    @include centrer;
+    background-color: $color-bgdark;
+    padding: 15px;
+
+
+    &__icon {
+        padding-right: 15px;
+    }
+
+    &__txt {
+        font-weight: 500;
+    }
+}
+
+.explore {
+    @include flex(column);
+    @include centrer;
+    background-color: $color-bglight;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    &__bouton {
+        position: relative;
+        z-index: 1;
+
+    }
+}
+
+// FONCTIONNEMENT
+
+.fct {
+    margin: 15px;
+    padding-bottom: 30px;
+
+    &__list {
+        @include flex(column);
+        gap: 15px;
+        position: relative;
+
+    }
+
+    &__listElt {
+        display: flex;
+        align-items: center;
+        background-color: $color-bglight;
+        box-shadow: 5px 5px 10px $color-bgdark;
+        border-radius: 15px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+
+
+        &:hover {
+            cursor: pointer;
+            background-color: $color-secondaryhover;
+
+            .fct__icon {
+                color: $color-primary
+            }
+        }
+    }
+
+    &__number {
+        display: flex;
+        background-color: $color-primary;
+        color: $color-white;
+        border-radius: 80px;
+        padding: 10px;
+        height: 30px;
+        align-items: center;
+        margin-left: -10px;
+    }
+
+    &__content {
+        display: flex;
+        padding-left: 15px;
+        gap: 15px;
+    }
+
+    &__icon {
+        padding-left: 15px;
+    }
+
+    &__txt {
+        font-weight: 500;
+    }
+}
+
+
+@media screen and (min-width:768px) {
+    .fct {
+        width: 70%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width:992px) {
+    .fct {
+        width: 95%;
+
+        &__list {
+            @include flex(row);
+            gap: 30px;
+
+        }
+
+        &__listElt {
+            display: flex;
+            flex: 1;
+            background-color: $color-bglight;
+            border-radius: 15px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-right: 30px;
+        }
+    }
+}
+
+
+
+
+// RESTAURANTS
+
+.restaurants {
+    padding: 15px;
+    background-color: $color-bglight;
+
+    &__title {
+        padding-top: 15px;
+    }
+}
+
+.resto {
+    @include flex(column);
+    row-gap: 10px;
+}
+
+.card {
+    display: flex;
+
+    &__item {
+        position: relative;
+        background-color: $color-white;
+        width: 100%;
+        height: 210px;
+        border-radius: 15px;
+    }
+
+    &__image {
+        height: 150px;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 15px 15px 0 0;
+    }
+
+    &__badge {
+        position: absolute;
+        background-color: $color-tertiary;
+        top: 20px;
+        right: 20px;
+        font-size: 14px;
+        padding: 5px;
+    }
+
+    &__footer {
+        display: flex;
+        align-items: center;
+        padding-left: 15px;
+        justify-content: space-between;
+    }
+
+    &__subtitle {
+        font-size: 12px;
+    }
+
+}
+
+@media screen and (min-width:768px) {
+    .card {
+        display: flex;
+
+        &__item {
+            position: relative;
+            background-color: $color-white;
+            height: 220px;
+            border-radius: 15px;
+
+        }
+    }
+}
+
+@media screen and (min-width:992px) {
+    .resto {
+        @include flex(row);
+        flex-flow: wrap;
+        justify-content: space-between;
+       
+    }
+
+
+    .card {
+        display: flex;
+        width: 48%;
+
+        &__item {
+            position: relative;
+            background-color: $color-white;
+            height: 220px;
+            border-radius: 15px;
+
+        }
+    }
+
+}

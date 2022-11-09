@@ -1,0 +1,20 @@
+* {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.html,
+body {
+  font-family: $font_body;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  max-width: 1680px;
+  height: 100%;
+  background-color: $color-white;
+}
+
+.globalwrapper {
+  max-width: 1680px;
+  max-height: 100%;
+  background-color: $color-white;
+}

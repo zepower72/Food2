@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>OHMYFOOD</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Shrikhand&display=swap"
+    rel="stylesheet">
+  <script src="https://kit.fontawesome.com/fedc061add.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+  <div class="loader-container">
+    <div class="loader"></div>
+  </div>
+  <div class="globalwrapper">
+
+    <header class="headermenu">
+      <h1>Ohmyfood</h1>
+    </header>
+
+    <main>
+
+      <section class="section">
+        <div class="place">
+          <i class="fa-solid fa-location-dot place__icon"></i>
+          <span class="place__txt">Où cherchez-vous?</span>
+        </div>
+        <div class="explore">
+          <h2>Réservez le menu qui vous convient</h2>
+          <p class="explore__subtitle">Découvrez des restaurants d'exception sélectionnées par nos soins</p>
+          <a class="bouton" href="#">Explorer nos restaurants</a>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="fct">
+          <h2>Fonctionnement</h2>
+          <div class="fct__list">
+            <a class="fct__listElt" href="#">
+              <div class="fct__number">1</div>
+              <div class="fct__content">
+                <i class="fa-solid fa-mobile-screen fct__icon"></i>
+                <span class="fct__txt">Choisissez un restaurant</span>
+              </div>
+            </a>
+            <a class="fct__listElt" href="#">
+              <div class="fct__number">2</div>
+              <div class="fct__content">
+                <i class="fa-solid fa-list fct__icon"></i>
+                <span class="fct__txt">Composez votre menu</span>
+              </div>
+            </a>
+            <a class="fct__listElt" href="#">
+              <div class="fct__number">3</div>
+              <div class="fct__content">
+                <i class="fa-solid fa-store fct__icon"></i>
+                <span class="fct__txt">Dégustez au restaurant</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="restaurants">
+          <h2>Restaurants</h2>
+          <div class="resto">
+            <article class="card">
+              <a class="card__item" href="./pages/la_palette_du_gout.html">
+                <img src="./images/la_palette_du_gout.jpg" class="card__image" alt="La palette du goût">
+                <span class="card__badge">Nouveau</span>
+                <div class="card__footer">
+                  <div class="card__body">
+                    <h3 class="card__title">La palette du goût</h3>
+                    <span class="card__subtitle">Ménilmontant</span>
+                  </div>
+                  <div class="card__btn">
+                    <i class="fa-regular fa-heart boutoncoeur--empty"></i>
+                    <i class="fa-solid fa-heart boutoncoeur--full"></i>
+                  </div>
+                </div>
+              </a>
+            </article>
+            <article class="card">
+              <a class="card__item" href="./pages/la_note_enchantee.html">
+                <img src="./images/la_note_enchantee.jpg" class="card__image" alt="La note enchantée">
+                <span class="card__badge">Nouveau</span>
+                <div class="card__footer">
+                  <div class="card__body">
+                    <h3 class="card__title">La note enchantée</h3>
+                    <span class="card__subtitle">Charonne</span>
+                  </div>
+                  <div class="card__btn">
+                    <i class="fa-regular fa-heart boutoncoeur--empty"></i>
+                    <i class="fa-solid fa-heart boutoncoeur--full"></i>
+                  </div>
+                </div>
+              </a>
+            </article>
+            <article class="card">
+              <a class="card__item" href="./pages/a_la_francaise.html">
+                <img src="./images/a_la_francaise.jpg" class="card__image" alt="A la française">
+                <div class="card__footer">
+                  <div class="card__body">
+                    <h3 class="card__title">A la française</h3>
+                    <span class="card__subtitle">Cité rouge</span>
+                  </div>
+                  <div class="card__btn">
+                    <i class="fa-regular fa-heart boutoncoeur--empty"></i>
+                    <i class="fa-solid fa-heart boutoncoeur--full"></i>
+                  </div>
+                </div>
+              </a>
+            </article>
+            <article class="card">
+              <a class="card__item" href="./pages/le_delice_des_sens.html">
+                <img src="./images/le_delice_des_sens.jpg" class="card__image" alt="La palette du goût">
+                <div class="card__footer">
+                  <div class="card__body">
+                    <h3 class="card__title">Le délice des sens</h3>
+                    <span class="card__subtitle">Folie-Méricourt</span>
+                  </div>
+                  <div class="card__btn">
+                    <i class="fa-regular fa-heart boutoncoeur--empty"></i>
+                    <i class="fa-solid fa-heart boutoncoeur--full"></i>
+                  </div>
+                </div>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+    </main>
+    <footer>
+      <div class="footer">
+        <span class="footer__logo">Ohmyfood</span>
+        <div class="footer__list">
+          <div class="footer__listElt">
+            <a class="footer__link" href="#">
+              <i class="fa-solid fa-utensils footer__icon"></i>
+              <span class="footer__txt">Proposer un restaurant</span>
+            </a>
+          </div>
+          <div class="footer__listElt">
+            <a class="footer__link" href="#">
+              <i class="fa-solid fa-handshake-angle footer__icon"></i>
+              <span class="footer__txt">Devenir partenaire</span>
+            </a>
+          </div>
+          <div class="footer__listElt">
+            <a class="footer__link" href="#">Mentions légales</a>
+          </div>
+          <div class="footer__listElt">
+            <a class="footer__link" href="mailto:agathezepoeur@gmail.com">Contact</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+.headermenu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  &__logo {
+    font-family: $font-head;
+     font-size: 25px;
+  }
+}

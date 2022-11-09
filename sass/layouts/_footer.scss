@@ -1,0 +1,69 @@
+// FOOTER
+
+.footer {
+  @include flex(column);
+  background-color: $color-black;
+  padding: 15px;
+  margin: 0;
+
+
+  &__logo {
+      color: $color-white;
+      font-family: $font-head;
+      font-size: 18px;
+      padding-bottom: 15px;
+  }
+
+  &__listElt {
+      display: flex;
+      padding-bottom: 5px;
+
+  }
+
+  &__icon {
+      width: 30px;
+  }
+
+  &:first-child {
+      margin-top: 0;
+  }
+
+  &:last-child {
+      margin-bottom: 0;
+  }
+
+  &__link {
+      color: $color-white;
+      text-decoration: none;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .footer {
+      &__list {
+          @include flex(row);
+          padding-bottom: 5px;
+          justify-content: space-around;
+          gap:30px;
+
+      }
+  }
+}
+
+@media screen and (min-width:992px) {
+  .footer {
+
+      &__logo {
+          padding-top: 50px;
+
+      }
+
+      &__list {
+          @include flex(row);
+          padding-bottom: 5px;
+          justify-content: space-between;
+          width: 85%;
+
+      }
+  }
+}
