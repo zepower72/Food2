@@ -75,23 +75,6 @@ th {
   padding: 0;
 }
 
-@-webkit-keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 @-webkit-keyframes loadingscreen {
   0% {
     opacity: 1;
@@ -101,6 +84,7 @@ th {
     z-index: -100;
   }
 }
+
 @keyframes loadingscreen {
   0% {
     opacity: 1;
@@ -108,6 +92,46 @@ th {
   100% {
     opacity: 0;
     z-index: -100;
+  }
+}
+@-webkit-keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+@-webkit-keyframes load {
+  0% {
+    stroke-dashoffset: 570;
+  }
+  50% {
+    stroke-dashoffset: 530;
+  }
+  100% {
+    stroke-dashoffset: 570;
+    transform: rotate(360deg);
+  }
+}
+@keyframes load {
+  0% {
+    stroke-dashoffset: 570;
+  }
+  50% {
+    stroke-dashoffset: 530;
+  }
+  100% {
+    stroke-dashoffset: 570;
+    transform: rotate(360deg);
   }
 }
 @-webkit-keyframes translate {
@@ -247,39 +271,56 @@ p {
   position: relative;
   width: 250px;
   height: 250px;
-  border-radius: 50%;
-  border: 10px solid transparent;
-  border-top-color: rgb(153, 226, 208);
-  -webkit-animation: spin 3s linear;
-          animation: spin 3s linear;
 }
 
-.loader::before,
-.loader::after {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  border: 10px solid transparent;
+svg {
+  width: 90%;
+  fill: none;
 }
 
-.loader::before {
-  top: 10px;
-  left: 10px;
-  right: 10px;
-  bottom: 10px;
-  border-top-color: rgb(255, 121, 218);
-  -webkit-animation: spin 2.5s linear;
-          animation: spin 2.5s linear;
+.load {
+  transform-origin: 50% 50%;
+  stroke-dasharray: 570;
+  stroke-width: 20px;
+}
+.load.one {
+  stroke: rgb(147, 86, 220);
+  -webkit-animation: load 1.5s infinite;
+          animation: load 1.5s infinite;
+}
+.load.two {
+  stroke: rgb(255, 121, 218);
+  -webkit-animation: load 1.5s infinite;
+          animation: load 1.5s infinite;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+.load.three {
+  stroke: rgb(153, 226, 208);
+  -webkit-animation: load 1.5s infinite;
+          animation: load 1.5s infinite;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
 }
 
-.loader::after {
-  top: 25px;
-  left: 25px;
-  right: 25px;
-  bottom: 25px;
-  border-top-color: rgb(147, 86, 220);
-  -webkit-animation: spin 1.5s linear;
-          animation: spin 1.5s linear;
+.point {
+  -webkit-animation: bounce 1s infinite ease-in-out;
+          animation: bounce 1s infinite ease-in-out;
+}
+.point.one {
+  fill: rgb(147, 86, 220);
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+.point.two {
+  fill: rgb(255, 121, 218);
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+.point.three {
+  fill: rgb(153, 226, 208);
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
 }
 
 .headermenu {
